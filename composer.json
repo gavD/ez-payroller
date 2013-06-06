@@ -1,5 +1,5 @@
 {
-    "name": "gavd/ezpayroll",
+    "name": "gavd/ezpayroller",
     "description": "Simple CLI utility to generate CSV of payroll dates",
     "require": {
         "nesbot/carbon": "1.2.*"
@@ -16,7 +16,7 @@
     ],
     "autoload": {
         "psr-0": {
-            "payroll": "src"
+            "ezpayroller": "src"
         }
     },
     "minimum-stability": "stable"
