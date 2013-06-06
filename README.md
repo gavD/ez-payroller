@@ -24,4 +24,7 @@ Running tests and analysis
 
 Run "ant" to run all tests, static analysis et cetera. This project is based on [Sebastian Bergmann's Jenkins-PHP template](http://jenkins-php.org/index.html).
 
+Continuous Integration
+----------------------
 
+This project is continuously integrated using Travis CI.
