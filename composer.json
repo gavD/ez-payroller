@@ -1,0 +1,23 @@
+{
+    "name": "gavd/ezpayroll",
+    "description": "Simple CLI utility to generate CSV of payroll dates",
+    "require": {
+        "nesbot/carbon": "1.2.*"
+    },
+    "require-dev": {
+        "phpmd/phpmd" : "1.4.*"
+    },
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Gavin Davies",
+            "email": "gavindavies@gmail.com"
+        }
+    ],
+    "autoload": {
+        "psr-0": {
+            "payroll": "src"
+        }
+    },
+    "minimum-stability": "stable"
+}
