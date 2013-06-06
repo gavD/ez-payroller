@@ -29,7 +29,7 @@ class PayrollCollator
     {
         $response = array();
 
-        for($month = 1; $month <= 12; $month++) {
+        for ($month = 1; $month <= 12; $month++) {
             $response[] = array(
                 'Month name' => $this->dateCalc->getMonthName($month),
                 'Salary payment date' => $this->dateCalc->getSalaryPaymentDate($year, $month),

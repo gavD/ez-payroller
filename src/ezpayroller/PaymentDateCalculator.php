@@ -54,7 +54,7 @@ class PaymentDateCalculator
         /* @var $date \Carbon\Carbon */
         $date = Carbon::createFromDate($year, $month, 15);
         if ($date->isWeekend()) {
-            while($date->dayOfWeek !== Carbon::WEDNESDAY) {
+            while ($date->dayOfWeek !== Carbon::WEDNESDAY) {
                 $date = $date->addDay();
             }
         }

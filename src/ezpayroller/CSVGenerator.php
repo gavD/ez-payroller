@@ -60,14 +60,14 @@ class CSVGenerator
      * @param int $year E.g. 2013
      * @return string CSV. Dates are formatted 'l jS'
      */
-    public function generateCSV($year) {
-
+    public function generateCSV($year)
+    {
         $payroll = $this->payroll->getPayroll((int)$year);
 
         // As this is a small data set, string concatenation is adequate and
         // performant.
         $csv = "Month name,Salary payment date,Bonus payment date\n";
-        foreach($payroll as $month) {
+        foreach ($payroll as $month) {
             $csv .= $month['Month name'];
             $csv .= ',' . $month['Salary payment date']->format(self::DATE_FORMAT);
             $csv .= ',' . $month['Bonus payment date']->format(self::DATE_FORMAT);
