@@ -27,4 +27,4 @@ Run "ant" to run all tests, static analysis et cetera. This project is based on 
 Continuous Integration
 ----------------------
 
-This project is continuously integrated using Travis CI.
+This project is [continuously integrated using Travis CI](https://travis-ci.org/gavD/ez-payroller/).
