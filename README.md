@@ -58,10 +58,10 @@ This project is [continuously integrated using Travis CI](https://travis-ci.org/
 Coding standards
 ----------------
 
-The coding standard for this project is (PSR2)[http://www.php-fig.org/].
-The PMD rules applied are in the build directory and are as (defined by Sebastian Bergmann)[http://jenkins-php.org/].
+The coding standard for this project is [PSR2](http://www.php-fig.org/).
+The PMD rules applied are in the build directory and are as [defined by Sebastian Bergmann](http://jenkins-php.org/).
 
 Libraries used
 --------------
 
-* (Carbon)[https://github.com/briannesbitt/Carbon] has been used for date handling. This library abstracts away the slightly sketchy PHP date implementation. This library has a good reputation and is well written with an extensive battery of tests so I've been confident enough to rely upon it rather than reinvent the wheel.
+* [Carbon](https://github.com/briannesbitt/Carbon) has been used for date handling. This library abstracts away the slightly sketchy PHP date implementation. This library has a good reputation and is well written with an extensive battery of tests so I've been confident enough to rely upon it rather than reinvent the wheel.
