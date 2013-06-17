@@ -8,6 +8,11 @@ namespace ezpayroller;
 class PayrollCollator
 {
     /**
+     * @var \ezpayroller\PaymentDateCalculator $dateCalc Used for calculating dates
+     */
+    private $dateCalc;
+
+    /**
      * IOC pattern (dependency injection)
      * @param \ezpayroller\PaymentDateCalculator $dateCalc Used for calculating
      * the payment dates for each month.
