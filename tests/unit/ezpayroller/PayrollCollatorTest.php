@@ -25,31 +25,31 @@ class PayrollCollatorTest extends \PHPUnit_Framework_TestCase
     {
         $payroll = $this->sut->getPayroll(2012);
         $this->assertEquals(12, count($payroll));
-        $this->assertEquals(31, $payroll[0]['Salary payment date']->day);
-        $this->assertEquals(29, $payroll[1]['Salary payment date']->day);
-        $this->assertEquals(30, $payroll[2]['Salary payment date']->day);
-        $this->assertEquals(30, $payroll[3]['Salary payment date']->day);
-        $this->assertEquals(31, $payroll[4]['Salary payment date']->day);
-        $this->assertEquals(29, $payroll[5]['Salary payment date']->day);
-        $this->assertEquals(31, $payroll[6]['Salary payment date']->day);
-        $this->assertEquals(31, $payroll[7]['Salary payment date']->day);
-        $this->assertEquals(28, $payroll[8]['Salary payment date']->day);
-        $this->assertEquals(31, $payroll[9]['Salary payment date']->day);
-        $this->assertEquals(30, $payroll[10]['Salary payment date']->day);
-        $this->assertEquals(31, $payroll[11]['Salary payment date']->day);
+        $this->assertEquals(31, $payroll[0][PayrollCollator::FIELD_SALARY_PAYMENT_DATE]->day);
+        $this->assertEquals(29, $payroll[1][PayrollCollator::FIELD_SALARY_PAYMENT_DATE]->day);
+        $this->assertEquals(30, $payroll[2][PayrollCollator::FIELD_SALARY_PAYMENT_DATE]->day);
+        $this->assertEquals(30, $payroll[3][PayrollCollator::FIELD_SALARY_PAYMENT_DATE]->day);
+        $this->assertEquals(31, $payroll[4][PayrollCollator::FIELD_SALARY_PAYMENT_DATE]->day);
+        $this->assertEquals(29, $payroll[5][PayrollCollator::FIELD_SALARY_PAYMENT_DATE]->day);
+        $this->assertEquals(31, $payroll[6][PayrollCollator::FIELD_SALARY_PAYMENT_DATE]->day);
+        $this->assertEquals(31, $payroll[7][PayrollCollator::FIELD_SALARY_PAYMENT_DATE]->day);
+        $this->assertEquals(28, $payroll[8][PayrollCollator::FIELD_SALARY_PAYMENT_DATE]->day);
+        $this->assertEquals(31, $payroll[9][PayrollCollator::FIELD_SALARY_PAYMENT_DATE]->day);
+        $this->assertEquals(30, $payroll[10][PayrollCollator::FIELD_SALARY_PAYMENT_DATE]->day);
+        $this->assertEquals(31, $payroll[11][PayrollCollator::FIELD_SALARY_PAYMENT_DATE]->day);
 
         // check days of week are correct
-        $this->assertEquals(Carbon::TUESDAY, $payroll[0]['Salary payment date']->dayOfWeek);
-        $this->assertEquals(Carbon::WEDNESDAY, $payroll[1]['Salary payment date']->dayOfWeek);
-        $this->assertEquals(Carbon::FRIDAY, $payroll[2]['Salary payment date']->dayOfWeek);
-        $this->assertEquals(Carbon::MONDAY, $payroll[3]['Salary payment date']->dayOfWeek);
-        $this->assertEquals(Carbon::THURSDAY, $payroll[4]['Salary payment date']->dayOfWeek);
-        $this->assertEquals(Carbon::FRIDAY, $payroll[5]['Salary payment date']->dayOfWeek);
-        $this->assertEquals(Carbon::TUESDAY, $payroll[6]['Salary payment date']->dayOfWeek);
-        $this->assertEquals(Carbon::FRIDAY, $payroll[7]['Salary payment date']->dayOfWeek);
-        $this->assertEquals(Carbon::FRIDAY, $payroll[8]['Salary payment date']->dayOfWeek);
-        $this->assertEquals(Carbon::WEDNESDAY, $payroll[9]['Salary payment date']->dayOfWeek);
-        $this->assertEquals(Carbon::FRIDAY, $payroll[10]['Salary payment date']->dayOfWeek);
-        $this->assertEquals(Carbon::MONDAY, $payroll[11]['Salary payment date']->dayOfWeek);
+        $this->assertEquals(Carbon::TUESDAY, $payroll[0][PayrollCollator::FIELD_SALARY_PAYMENT_DATE]->dayOfWeek);
+        $this->assertEquals(Carbon::WEDNESDAY, $payroll[1][PayrollCollator::FIELD_SALARY_PAYMENT_DATE]->dayOfWeek);
+        $this->assertEquals(Carbon::FRIDAY, $payroll[2][PayrollCollator::FIELD_SALARY_PAYMENT_DATE]->dayOfWeek);
+        $this->assertEquals(Carbon::MONDAY, $payroll[3][PayrollCollator::FIELD_SALARY_PAYMENT_DATE]->dayOfWeek);
+        $this->assertEquals(Carbon::THURSDAY, $payroll[4][PayrollCollator::FIELD_SALARY_PAYMENT_DATE]->dayOfWeek);
+        $this->assertEquals(Carbon::FRIDAY, $payroll[5][PayrollCollator::FIELD_SALARY_PAYMENT_DATE]->dayOfWeek);
+        $this->assertEquals(Carbon::TUESDAY, $payroll[6][PayrollCollator::FIELD_SALARY_PAYMENT_DATE]->dayOfWeek);
+        $this->assertEquals(Carbon::FRIDAY, $payroll[7][PayrollCollator::FIELD_SALARY_PAYMENT_DATE]->dayOfWeek);
+        $this->assertEquals(Carbon::FRIDAY, $payroll[8][PayrollCollator::FIELD_SALARY_PAYMENT_DATE]->dayOfWeek);
+        $this->assertEquals(Carbon::WEDNESDAY, $payroll[9][PayrollCollator::FIELD_SALARY_PAYMENT_DATE]->dayOfWeek);
+        $this->assertEquals(Carbon::FRIDAY, $payroll[10][PayrollCollator::FIELD_SALARY_PAYMENT_DATE]->dayOfWeek);
+        $this->assertEquals(Carbon::MONDAY, $payroll[11][PayrollCollator::FIELD_SALARY_PAYMENT_DATE]->dayOfWeek);
     }
 }

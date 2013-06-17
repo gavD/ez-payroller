@@ -12,6 +12,10 @@ class PayrollCollator
      */
     private $dateCalc;
 
+    const FIELD_MONTH_NAME = 'Month name';
+    const FIELD_SALARY_PAYMENT_DATE = 'Salary payment date';
+    const FIELD_BONUS_PAYMENT_DATE = 'Bonus payment date';
+
     /**
      * IOC pattern (dependency injection)
      * @param \ezpayroller\PaymentDateCalculator $dateCalc Used for calculating
@@ -36,9 +40,9 @@ class PayrollCollator
 
         for ($month = 1; $month <= 12; $month++) {
             $response[] = array(
-                'Month name' => $this->dateCalc->getMonthName($month),
-                'Salary payment date' => $this->dateCalc->getSalaryPaymentDate($year, $month),
-                'Bonus payment date' => $this->dateCalc->getBonusPaymentDate($year, $month)
+                self::FIELD_MONTH_NAME => $this->dateCalc->getMonthName($month),
+                self::FIELD_SALARY_PAYMENT_DATE => $this->dateCalc->getSalaryPaymentDate($year, $month),
+                self::FIELD_BONUS_PAYMENT_DATE => $this->dateCalc->getBonusPaymentDate($year, $month)
             );
         }
         return $response;

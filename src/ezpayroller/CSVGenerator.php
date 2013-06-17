@@ -66,11 +66,20 @@ class CSVGenerator
 
         // As this is a small data set, string concatenation is adequate and
         // performant.
-        $csv = "Month name,Salary payment date,Bonus payment date\n";
+        $csv = implode(
+            ',',
+            array(
+                PayrollCollator::FIELD_MONTH_NAME,
+                PayrollCollator::FIELD_SALARY_PAYMENT_DATE,
+                PayrollCollator::FIELD_BONUS_PAYMENT_DATE
+            )
+        )
+        . "\n";
+
         foreach ($payroll as $month) {
-            $csv .= $month['Month name'];
-            $csv .= ',' . $month['Salary payment date']->format(self::DATE_FORMAT);
-            $csv .= ',' . $month['Bonus payment date']->format(self::DATE_FORMAT);
+            $csv .= $month[PayrollCollator::FIELD_MONTH_NAME];
+            $csv .= ',' . $month[PayrollCollator::FIELD_SALARY_PAYMENT_DATE]->format(self::DATE_FORMAT);
+            $csv .= ',' . $month[PayrollCollator::FIELD_BONUS_PAYMENT_DATE]->format(self::DATE_FORMAT);
             $csv .= "\n";
         }
 
